@@ -22,12 +22,12 @@
 	
 
 	describe('A Rule', function(){
-		it ('should accept accept a ruleset via its contructor', function(){
+		it ('should accept a ruleset via its constructor', function(){
 			rule = new Rule({
 				  domain 	: 'j.b'
 				, pathname 	: /e-(\d+)$/gi
 				, path 		: '/event'
-				, options : {
+				, parameters : {
 					tenant: 1
 				}
 				, ensure: {
@@ -38,7 +38,7 @@
 				}
 			});
 
-			assert.equal(JSON.stringify(manager.getRules()), '[{"domain":"j.b","path":{},"field":"","value":"/event","name":"path"},{"domain":"j.b","path":{},"field":"tenant","value":1,"name":"option"},{"domain":"j.b","path":{},"field":"api-version","value":1,"name":"ensure"},{"domain":"j.b","path":{},"field":"range","value":"0-60","name":"override"}]');
+			assert.equal(JSON.stringify(manager.getRules()), '[{"domain":"j.b","path":{},"field":"","value":"/event","name":"path"},{"domain":"j.b","path":{},"field":"tenant","value":1,"name":"parameter"},{"domain":"j.b","path":{},"field":"api-version","value":1,"name":"ensure"},{"domain":"j.b","path":{},"field":"range","value":"0-60","name":"override"}]');
 		});	
 
 
@@ -48,7 +48,7 @@
 				.ensure('select', '*')
 				.getRules();
 
-			assert.equal(JSON.stringify(rules), '[{"domain":"j.b","path":{},"field":"","value":"/event","name":"path"},{"domain":"j.b","path":{},"field":"tenant","value":1,"name":"option"},{"domain":"j.b","path":{},"field":"api-version","value":1,"name":"ensure"},{"domain":"j.b","path":{},"field":"range","value":"0-60","name":"override"},{"domain":"j.b","path":{},"field":"","value":"detail.html","name":"template"},{"domain":"j.b","path":{},"field":"select","value":"*","name":"ensure"}]');
+			assert.equal(JSON.stringify(rules), '[{"domain":"j.b","path":{},"field":"","value":"/event","name":"path"},{"domain":"j.b","path":{},"field":"tenant","value":1,"name":"parameter"},{"domain":"j.b","path":{},"field":"api-version","value":1,"name":"ensure"},{"domain":"j.b","path":{},"field":"range","value":"0-60","name":"override"},{"domain":"j.b","path":{},"field":"","value":"detail.html","name":"template"},{"domain":"j.b","path":{},"field":"select","value":"*","name":"ensure"}]');
 		});
 	});
 	
