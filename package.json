@@ -1,7 +1,7 @@
 {
       "name"                        : "ee-soa-rule-manager"
     , "description"                 : "Rewriterule Generator for ee-soa"
-    , "version"                     : "0.1.7"
+    , "version"                     : "0.1.8"
     , "homepage"                    : "https://github.com/eventEmitter/ee-soa-rule-manager"
     , "author"                      : "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
     , "licence"                     : "mit"
