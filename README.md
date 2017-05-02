@@ -1,5 +1,7 @@
 # ee-soa-rule-manager
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/eventEmitter/ee-soa-rule-manager.svg)](https://greenkeeper.io/)
+
 Rewriterule Generator for ee-soa
 
 ## installation
